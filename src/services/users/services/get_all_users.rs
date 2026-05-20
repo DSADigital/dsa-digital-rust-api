@@ -2,10 +2,7 @@ use crate::AppState;
 use actix_web::{HttpResponse, Responder, get, web::Data};
 use serde_json::json;
 
-use crate::services::users::{
-    models::UserModel,
-    sql_commands::SELECT_ALL_USERS,
-};
+use crate::services::users::{models::UserModel, sql_commands::SELECT_ALL_USERS};
 
 #[get("/users")]
 async fn get_all_users(db: Data<AppState>) -> impl Responder {

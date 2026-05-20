@@ -2,8 +2,7 @@ use actix_web::{App, HttpServer, web::Data};
 use sqlx::{Pool, Postgres};
 
 mod database;
-pub mod messages;
-pub mod responses;
+mod messages;
 mod services;
 
 use crate::services::users;
